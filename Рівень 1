@@ -1,0 +1,26 @@
+@file:JvmName("JDoodle")
+import kotlin.math.*
+fun main() 
+{
+    println("Введіть кут в радіанах:")
+    val input = readLine()
+    val rad = input?.toDoubleOrNull()
+    if (rad == null) 
+    {
+        println("Введіть правильне число!")
+    } else
+    {
+    val sinres = sin(rad)
+    val cosres = cos(rad)
+    if (sinres > cosres) 
+    {
+        println("Синус ($sinres) більший за косинус ($cosres).")
+    } else if (sinres < cosres) 
+    {
+        println("Косинус ($cosres) більший за синус ($sinres).")
+    } else 
+    {
+        println("Синус і косинус рівні ($sinres).")
+    }
+  }
+}

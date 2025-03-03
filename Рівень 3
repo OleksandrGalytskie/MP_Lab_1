@@ -1,0 +1,16 @@
+@file:JvmName("JDoodle")
+fun swap(n: Int): Int 
+{
+    val str = n.toString()
+    if (str.length < 2) return n 
+    return (str.last() + str.substring(1, str.length - 1) + str.first()).toInt()
+}
+fun main() 
+{
+    println("Введіть число:")
+    val numb = readLine()?.toIntOrNull() ?: return println("Некоректне число")
+    val res = swap(numb)
+    println("Число після перестановки цифр: $res")
+}
+
+

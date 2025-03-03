@@ -1,0 +1,10 @@
+@file:JvmName("JDoodle")
+fun main() 
+{
+    println("Введіть натуральні числа через пробіл:")
+    val input = readLine() ?: ""
+    val numb = input.split(" ").mapNotNull { it.toIntOrNull() }
+    val count = numbers.count { it in 100..999 }
+    println("Кількість тризначних чисел у послідовності: $count")
+}
+
